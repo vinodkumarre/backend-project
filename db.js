@@ -42,7 +42,7 @@ const updateUser = (request, response) => {
 
     pool.query(
         'UPDATE books SET name = $1, author = $2, publishedby = $3,  WHERE name = $4',
-        [name, author, publishedby, id],
+        [name, author, publishedby],
         (error) => {
         if (error) {
             throw error
